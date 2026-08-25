@@ -31,7 +31,7 @@ Write a query to print the pattern _P(20)_.
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-25T18:27:19.180Z  
+**Submitted:** 2026-08-25T18:31:18.702Z  
 
 ```sql
 
