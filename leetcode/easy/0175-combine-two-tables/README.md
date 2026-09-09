@@ -81,9 +81,9 @@ addressId = 1 contains information about the address of personId = 2.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 449 ms (beats 57.01%)  
+**Runtime:** 435 ms (beats 66.35%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-09-08T19:48:11.602Z  
+**Submitted:** 2026-09-09T08:49:24.613Z  
 
 ```sql
 /* Write your T-SQL query statement below */
