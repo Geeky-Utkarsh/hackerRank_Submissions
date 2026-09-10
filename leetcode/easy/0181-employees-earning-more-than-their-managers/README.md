@@ -56,16 +56,18 @@ Explanation: Joe is the only employee who earns more than his manager.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 1061 ms (beats 5.01%)  
+**Runtime:** 534 ms (beats 33.77%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-09-10T09:04:36.362Z  
+**Submitted:** 2026-09-10T09:45:29.613Z  
 
 ```sql
 /* Write your T-SQL query statement below */
 
 -- SELECT name FROM Employee where id NOT IN (SELECT name FROM Employee WHERE managerId)
 
-SELECT a.name AS Employee FROM Employee AS e INNER JOIN Employee AS a ON e.id=a.managerId WHERE a.salary>e.salary; 
+SELECT a.name AS Employee FROM Employee a
+WHERE 
+(select salary from Employee where a.managerId = id) < a.salary; 
 ```
 
 ---
