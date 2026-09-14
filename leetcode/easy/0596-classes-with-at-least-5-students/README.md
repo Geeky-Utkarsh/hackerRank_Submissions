@@ -63,9 +63,9 @@ Explanation:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 323 ms (beats 87.63%)  
+**Runtime:** 374 ms (beats 40.59%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-09-14T16:50:29.538Z  
+**Submitted:** 2026-09-14T16:53:34.350Z  
 
 ```sql
 # Write your MySQL query statement below
@@ -88,7 +88,10 @@ Explanation:
 
 
 -- Solution --> 3 [SubQuery Based Approach]
-SELECT distinct class FROM Courses WHERE class IN ( SELECT class FROM Courses GROUP BY class HAVING COUNT(class)>=5 ORDER BY COUNT(class) );
+SELECT DISTINCT class FROM Courses WHERE class IN ( SELECT class FROM Courses GROUP BY class HAVING COUNT(class)>=5 ORDER BY COUNT(class) );
+
+
+-- SELECT /distinct/ class FROM Courses WHERE class IN ( SELECT class FROM Courses GROUP BY class HAVING COUNT(class)>=5 ORDER BY COUNT(class) );
 ```
 
 ---
