@@ -84,26 +84,25 @@ Explanation: There are no single numbers in the input table so we return null.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 413 ms (beats 92.53%)  
+**Runtime:** 416 ms (beats 91.40%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-09-14T16:03:31.950Z  
+**Submitted:** 2026-09-14T16:04:22.742Z  
 
 ```sql
 -- SELECT num FROM MyNumbers GROUP BY num HAVING COUNT(num)=1 ORDER BY num DESC limit 1;
 
 
+-- Solution -> 1 [UNION Based to Deal with NULL]
 --  SELECT num FROM MyNumbers GROUP BY num HAVING COUNT(num)=1)
     --  UNION
 --  (SELECT NULL) ORDER BY num DESC limit 1; 
 
--- SELECT num, COUNT(distinct num) FROM MyNumbers GROUP BY num; 
 
-
--- Solution -> 1 [SubQuery Based]
+-- Solution -> 2 [SubQuery Based]
 -- SELECT MAX(num) AS num FROM (SELECT num FROM MyNumbers GROUP BY num HAVING COUNT(num)=1) AS F;
 
 
--- Solution -> 2 [Using CTE]
+-- Solution -> 3 [Using CTE]
 with cte_name AS (
     SELECT num FROM (SELECT num FROM MyNumbers GROUP BY num HAVING COUNT(num)=1) AS F
 )
