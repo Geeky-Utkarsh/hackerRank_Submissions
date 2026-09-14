@@ -63,9 +63,9 @@ Explanation:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 424 ms (beats 17.57%)  
+**Runtime:** 323 ms (beats 87.63%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-09-14T16:42:42.869Z  
+**Submitted:** 2026-09-14T16:50:29.538Z  
 
 ```sql
 # Write your MySQL query statement below
@@ -73,16 +73,22 @@ Explanation:
 -- Solution -> 1 [GROUP BY + Aggregate Function]
 -- SELECT class /* COUNT(class) */ FROM Courses WHERE COUNT(class)>5 GROUP BY class ORDER BY class DESC LIMIT 1; 
 
+
+
+
 -- Solution--> 1 [GROUP BY + Aggregate Fn] based approach  
 -- SELECT class FROM Courses GROUP BY class HAVING COUNT(class)>=5 ORDER BY COUNT(class); 
 
+
 -- Solution--> 2 [cte based approach]
+-- with cte_name AS (
+--    SELECT class FROM Courses GROUP BY class HAVING COUNT(class)>=5 ORDER BY COUNT(class) 
+-- )
+-- SELECT class FROM cte_name;
 
-with cte_name AS (
-   SELECT class FROM Courses GROUP BY class HAVING COUNT(class)>=5 ORDER BY COUNT(class) 
-)
 
-SELECT class FROM cte_name;
+-- Solution --> 3 [SubQuery Based Approach]
+SELECT distinct class FROM Courses WHERE class IN ( SELECT class FROM Courses GROUP BY class HAVING COUNT(class)>=5 ORDER BY COUNT(class) );
 ```
 
 ---
