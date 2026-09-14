@@ -84,9 +84,9 @@ Explanation: There are no single numbers in the input table so we return null.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 474 ms (beats 54.55%)  
+**Runtime:** 413 ms (beats 92.53%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-09-12T17:31:31.769Z  
+**Submitted:** 2026-09-14T16:03:31.950Z  
 
 ```sql
 -- SELECT num FROM MyNumbers GROUP BY num HAVING COUNT(num)=1 ORDER BY num DESC limit 1;
@@ -99,9 +99,16 @@ Explanation: There are no single numbers in the input table so we return null.
 -- SELECT num, COUNT(distinct num) FROM MyNumbers GROUP BY num; 
 
 
-SELECT MAX(num) AS num FROM (SELECT num FROM MyNumbers GROUP BY num HAVING COUNT(num)=1) AS F;
+-- Solution -> 1 [SubQuery Based]
+-- SELECT MAX(num) AS num FROM (SELECT num FROM MyNumbers GROUP BY num HAVING COUNT(num)=1) AS F;
 
 
+-- Solution -> 2 [Using CTE]
+with cte_name AS (
+    SELECT num FROM (SELECT num FROM MyNumbers GROUP BY num HAVING COUNT(num)=1) AS F
+)
+
+SELECT MAX(num) as num FROM cte_name;
 ```
 
 ---
