@@ -28,12 +28,12 @@ The **CITY** and **COUNTRY** tables are described as follows:
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T19:12:44.589Z  
+**Submitted:** 2026-09-14T19:14:02.546Z  
 
 ```sql
 SELECT country.continent, FLOOR(AVG(city.population)) FROM city
  INNER JOIN country ON city.CountryCode=country.Code 
- GROUP BY COUNTRY.Continent;
+ GROUP BY country.Continent;
 
 ```
 
