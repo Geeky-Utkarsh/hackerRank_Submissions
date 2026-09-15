@@ -69,12 +69,13 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 312 ms (beats 43.03%)  
+**Runtime:** 277 ms (beats 83.82%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-09-08T09:02:08.704Z  
+**Submitted:** 2026-09-15T21:31:48.147Z  
 
 ```sql
 # Write your MySQL query statement below
+
 SELECT (SELECT distinct salary FROM employee ORDER BY salary DESC LIMIT 1 OFFSET 1) AS SecondHighestSalary;
 ```
 
