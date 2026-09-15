@@ -60,9 +60,9 @@ So the result is customer_number 3.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 473 ms (beats 80.36%)  
+**Runtime:** 453 ms (beats 90.78%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-09-14T15:59:01.934Z  
+**Submitted:** 2026-09-15T21:12:59.921Z  
 
 ```sql
 -- SELECT customer_number FROM Orders WHRERE cusomter_number=(SELECT DISTINCT COUNT(o.order_number) AS customer_num FROM Orders AS o ORDER BY customer_number GROUP BY customer_number); 
