@@ -27,7 +27,7 @@ The **CITY** and **COUNTRY** tables are described as follows:
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T19:22:06.933Z  
+**Submitted:** 2026-09-15T21:20:33.289Z  
 
 ```sql
 SELECT SUM(city.population) FROM city
