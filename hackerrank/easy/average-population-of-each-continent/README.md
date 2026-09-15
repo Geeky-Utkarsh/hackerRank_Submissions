@@ -28,7 +28,7 @@ The **CITY** and **COUNTRY** tables are described as follows:
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T19:14:02.546Z  
+**Submitted:** 2026-09-15T21:22:20.638Z  
 
 ```sql
 SELECT country.continent, FLOOR(AVG(city.population)) FROM city
