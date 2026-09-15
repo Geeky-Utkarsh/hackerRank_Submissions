@@ -84,9 +84,9 @@ Explanation: There are no single numbers in the input table so we return null.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 416 ms (beats 91.40%)  
+**Runtime:** 384 ms (beats 98.76%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-09-14T16:04:22.742Z  
+**Submitted:** 2026-09-15T21:15:17.317Z  
 
 ```sql
 -- SELECT num FROM MyNumbers GROUP BY num HAVING COUNT(num)=1 ORDER BY num DESC limit 1;
