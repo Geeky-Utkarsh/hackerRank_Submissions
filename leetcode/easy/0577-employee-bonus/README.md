@@ -84,12 +84,12 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 618 ms (beats 79.13%)  
+**Runtime:** 916 ms (beats 95.45%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-09-08T20:28:52.673Z  
+**Submitted:** 2026-09-15T21:18:47.026Z  
 
 ```sql
-/* Write your T-SQL query statement below */
+# Write your MySQL query statement below
 
 SELECT e.name ,b.bonus FROM employee AS e 
 LEFT JOIN bonus AS b ON e.empId=b.empId 
