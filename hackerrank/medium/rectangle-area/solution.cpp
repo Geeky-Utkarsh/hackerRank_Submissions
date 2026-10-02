@@ -1,39 +1,38 @@
-#include <cmath>
-#include <cstdio>
-#include <vector>
-#include <iostream>
-#include <algorithm>
-using namespace std;
 
-
-class Triangle{
-    public:
-    	void triangle(){
-     		cout<<"I am a triangle\n";
-    	}
-};
-
-class Isosceles : public Triangle{
-    public:
-    	void isosceles(){
-    		cout<<"I am an isosceles triangle\n";
-    	}
-        void t(){
-            cout<<"In an isosceles triangle two sides are equal"<<"\n";
+/*
+ * Create classes Rectangle and RectangleArea
+ 
+ */
+   class Rectangle{
+    public :
+      int width, height;
+      
+      Rectangle(){};
+      // parametrized constructor 
+      Rectangle(int width , int height ) : width(width) , height(height) {};
+      
+      // method() 
+       virtual void display (){  
+        cout<<width<<" "<<height<<"\n";
+       } 
+    
+   };
+   
+   class RectangleArea : public Rectangle {
+      public: 
+        // void read_input(int width, int height){
+            // this->width = width;
+            // this->height = height; 
+        // }
+        
+        void read_input(){
+            cin>> width;
+            cin>> height;
         }
-  		//Write your code here.
-};
+        
+        // Overriding of display() function from parents class 
+        void display(){
+            cout<<width*height<<"\n";
+        }          
+   };
 
-int main(){
-    
-    Isosceles isc;
-    
-    isc.isosceles();
-    
-    isc.t();
-    
-    isc.triangle();
-    
-    return 0;
-    
-}
