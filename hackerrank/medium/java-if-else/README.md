@@ -53,7 +53,7 @@ Print `Weird` if the number is weird; otherwise, print `Not Weird`.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-03T10:07:54.382Z  
+**Submitted:** 2026-10-03T10:11:19.564Z  
 
 ```java
 import java.io.*;
@@ -79,7 +79,7 @@ public class Solution {
         if( (N&1) == 0 && (N>=2 && N<=5) )
              System.out.println( "Not Weird" );
         if( (N&1) == 0 && (N>=6 && N<=20) )
-             System.out.println( "Not Weird" );
+             System.out.println( "Weird" );
         if( (N&1) == 0 && (N > 20) )
           System.out.println("Not Weird");
              
