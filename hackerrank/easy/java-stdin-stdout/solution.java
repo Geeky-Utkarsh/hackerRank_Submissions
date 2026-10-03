@@ -1,20 +1,26 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Solution {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int a = scan.nextInt();
-        // Complete this line 
-        int b = scan.nextInt();
-        // Complete this line
-        int c = scan.nextInt();
+        int i = scan.nextInt();
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
+        scan.nextLine(); // consume that "\\n"  present in the buffer , which was left by the scan.nextInt();
         
-        // Complete this line
-        // Complete this line
+        Double d = scan.nextDouble();
+        
+        scan.nextLine(); // even scan.nextDouble() also leaves "\n" in the Buffer . Just like  nextInt();
+        String s = scan.nextLine();
+        
+        
+        // Write your code here.
+
+        System.out.println("String: " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + i);
+        
+        
+        scan.close();
     }
 }
