@@ -1,4 +1,4 @@
-# Java Exception Handling (Try-catch)
+# Java Exception Handling
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -29,45 +29,35 @@ both $n$ and $p$ are zero, the output contains "n and p should not be zero.". Th
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-04T06:09:13.395Z  
+**Submitted:** 2026-10-04T06:28:52.450Z  
 
 ```java
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-public class Solution {
-
-    public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+class MyCalculator {
+    /*
+    * Create the method long power(int, int) here.
+    */
+    
+     public long power(int b, int p) throws Exception{
         
+        long res = 1;
         
-        try{
-            
-          Scanner sc = new Scanner(System.in);
+        if(b<0 || p<0)
+          throw new Exception("n or p should not be negative.");
           
-          int x = sc.nextInt();
-          int y = sc.nextInt();
-          
-          System.out.println(x/y);
-            
-        }catch(ArithmeticException | InputMismatchException e){  // We can catch multiple types of expcetions in 1 single catch() function 
-         
-            // Printing that object of the Expcetion class From catch() printing [Exception class name only];
-            // But with e.getMessage() -> [It will print both Exception-class Name + message]; 
-            // Pick-One-Of-Them; 
-            
-            if(e  instanceof InputMismatchException) // Using instance of operator to identify  the type of e in the block and run 2-cases accordingly.
-               System.out.println(e.getClass().getName());
-            else 
-              System.out.println(e);
-                                    
+        if(b==0 && p==0)
+          throw new Exception("n and p should not be zero.");
+        
+        for(int i=1; i<=p ;i++){
+            res*=b;
         }
-        
-    }
+        return res;
+     }
+    
+    
+    
 }
+
 
 ```
 
