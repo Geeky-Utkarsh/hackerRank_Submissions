@@ -25,7 +25,7 @@ Given a string $A$, print ``Yes`` if it is a palindrome, print ``No`` otherwise.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-04T06:41:02.807Z  
+**Submitted:** 2026-10-04T06:50:30.639Z  
 
 ```java
 import java.io.*;
@@ -41,8 +41,8 @@ public class Solution {
         
         String sb = new StringBuilder(A).reverse().toString();
         
-        if( sb.equals(A)  )   // Understand the working .equals() method , Default Object.equals() checks whether two references refer to the same object.
-          System.out.print("Yes");
+        if( sb.equals(A)  )        // Understand the working .equals() method , Default Object.equals() checks whether two references refer to the same object.
+          System.out.print("Yes"); // But the String class overrides the .equals() method to compare the content , not the reference of the object.
         else 
           System.out.println("No");
         
