@@ -29,7 +29,7 @@ For each line, print the line number, followed by a single space, and then the l
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-04T05:13:43.694Z  
+**Submitted:** 2026-10-04T05:16:20.245Z  
 
 ```java
 import java.io.*;
@@ -53,7 +53,8 @@ public class Solution {
         
         
         while( sc.hasNext() ){ // here .hashNext() method in java , is used to open consistent persistent/continous input stream on the console.
-          
+        // 
+        // This .hasNext() function is similar to getline(cin, source) function of CPP , both of these are used-inside-while-loop [to make the input-stream-persistent]  
              String curr = sc.nextLine();
              
              System.out.println(idx + " " + curr );
