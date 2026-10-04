@@ -11,7 +11,7 @@ public class Solution {
         
         String sb = new StringBuilder(A).reverse().toString();
         
-        if( sb.equals(A)  )
+        if( sb.equals(A)  )   // Understand the working .equals() method , Default Object.equals() checks whether two references refer to the same object.
           System.out.print("Yes");
         else 
           System.out.println("No");
