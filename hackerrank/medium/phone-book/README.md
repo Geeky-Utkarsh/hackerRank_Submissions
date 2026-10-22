@@ -1,0 +1,81 @@
+# Java Map
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
+
+## Problem
+
+You are given a phone book that consists of people's names and their phone number. After that you will be given some person's name as query. For each query, print the phone number of that person.
+
+**Input Format**
+
+The first line will have an integer $n$ denoting the number of entries in the phone book. Each entry consists of two lines: a name and the corresponding phone number. <br>
+
+After these, there will be some queries. Each query will contain a person's name. Read the queries until end-of-file.
+
+*Constraints:*<br>
+A person's name consists of only lower-case English letters and it may be in the format 'first-name last-name' or in the format 'first-name'. Each phone number has exactly 8 digits without any leading zeros.<br>
+
+$1 \le n \le 100000$<br>
+$1 \le Query \le 100000$<br>
+
+**Output Format**
+
+For each case, print "Not found" if the person has no entry in the phone book. Otherwise, print the person's name and phone number. See sample output for the exact format.
+
+To make the problem easier, we provided a portion of the code in the editor. You can either complete that code or write completely on your own.
+
+## Solution
+
+**Language:** Java  
+**Runtime:** N/A  
+**Memory:** N/A  
+**Submitted:** 2026-10-22T02:24:30.322Z  
+
+```java
+//Complete this code or write your own from scratch
+import java.util.*;
+import java.io.*;
+
+class Solution{
+	public static void main(String []argh)
+	{
+		Scanner in = new Scanner(System.in);
+		int n=in.nextInt();
+		in.nextLine();
+        
+        HashMap<String, Integer>f = new HashMap<>(); // 0. Creating the HashMap 
+        
+		for(int i=0;i<n;i++)
+		{
+			String name=in.nextLine();
+			int phone=in.nextInt();
+            
+            f.put(name, phone); // 1. Using .put() method of HashMap to insert K:V into the HashMap 
+            
+			in.nextLine();
+		}
+        
+		while(in.hasNext()) // 2. Here , this .hasNext() methods applied over Scanner Class Object , checks
+		{
+			String s=in.nextLine();  
+            
+            // if( f.get(s) == null ){  // 3. if .get() method returns "null" then <=> it means either the value or the key does not exits 
+            //   System.out.println("Not found");
+            // }
+            // else{
+                // System.out.println(s + "="+f.get(s));
+            // }
+            // System.out.println( s + "=" + (f.get(s) == null ? "\nNot found" : f.get(s)));
+            System.out.println( f.get(s) == null ? "Not found"  : s +"="+f.get(s) );
+		}
+	}
+}
+
+
+
+
+```
+
+---
+
+[View on HackerRank](https://www.hackerrank.com/challenges/phone-book/problem)
