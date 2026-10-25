@@ -1,4 +1,4 @@
-# Java Map
+# Java List
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -38,50 +38,57 @@ For each case, print 'true' if the string is balanced, 'false' otherwise.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-22T02:24:58.751Z  
+**Submitted:** 2026-10-25T12:30:28.878Z  
 
 ```java
-//Complete this code or write your own from scratch
-import java.util.*;
 import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
-class Solution{
-	public static void main(String []argh)
-	{
-		Scanner in = new Scanner(System.in);
-		int n=in.nextInt();
-		in.nextLine();
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
         
-        HashMap<String, Integer>f = new HashMap<>(); // 0. Creating the HashMap 
+        int sz = sc.nextInt(); // 0. Taking input for [the initial number of elements in L];
+        sc.nextLine(); 
+        ArrayList<Integer> L=  new ArrayList<>(sz);
         
-		for(int i=0;i<n;i++)
-		{
-			String name=in.nextLine();
-			int phone=in.nextInt();
-            
-            f.put(name, phone); // 1. Using .put() method of HashMap to insert K:V into the HashMap 
-            
-			in.nextLine();
-		}
+        while( sz-- > 0){ // N space-separated integers describing L.
+            int N = sc.nextInt();
+            L.add(N);
+        }
+        int Q = sc.nextInt(); // Contains Q(the number of queries).
         
-		while(in.hasNext()) // 2. Here , this .hasNext() methods applied over Scanner Class Object , checks
-		{
-			String s=in.nextLine();  
+        while( Q-- > 0){
+            sc.nextLine(); // consume "\n" from buffer left by nextInt() earlier as it reads token only.
+             
+            String QL = sc.nextLine(); // 1st line of query contains the String Insert
             
-            // if( f.get(s) == null ){  // 3. if .get() method returns "null" then <=> it means either the value or the key does not exits 
-            //   System.out.println("Not found");
-            // }
-            // else{
-                // System.out.println(s + "="+f.get(s));
-            // }
-            // System.out.println( s + "=" + (f.get(s) == null ? "\nNot found" : f.get(s)));
-            System.out.println( f.get(s) == null ? "Not found"  : s +"="+f.get(s) );
-		}
-	}
+            if (QL.equals("Insert")){ // if 1st String contains "Insert"
+            
+               int x, y; // 2nd line contains 2 space separated integers x, y
+               x = sc.nextInt();
+               y = sc.nextInt();
+               
+               // the value of u must be inserted into L at index x.
+               L.add(x,y); 
+            }
+            else {
+                int x = sc.nextInt(); // here x = index , where the value must be deleted from ArrayList L
+                L.remove(x);
+            }   
+        }
+        for(int e : L){
+            System.out.print(e+" ");
+        }
+        
+        
+    }
 }
-
-
-
 
 ```
 
