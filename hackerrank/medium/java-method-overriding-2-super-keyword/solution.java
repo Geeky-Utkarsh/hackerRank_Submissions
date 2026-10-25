@@ -1,8 +1,4 @@
 
-
-    // Write your overridden getNumberOfTeamMembers method here
-    @Override
-    void getNumberOfTeamMembers(){
-        System.out.println("Each team has 11 players in " + getName());
-    }
+        // using super.methodName() , to call a method which was defined in the SuperClass. 
+		String temp=super.define_me(); //Fix this line
 
