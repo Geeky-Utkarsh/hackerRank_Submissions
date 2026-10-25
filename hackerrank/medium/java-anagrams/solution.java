@@ -1,25 +1,26 @@
-import java.io.*;
-import java.util.*;
 
-public class Solution {
 
-    public static void main(String[] args) {
+    static boolean isAnagram(String a, String b) {
+        // if( a.length() != b.length()  )
+        //    return false;
         
-        Scanner sc=new Scanner(System.in);
-        String A=sc.next();
+        // Complete the function
         
+        String x = a.toLowerCase();
+        String y = b.toLowerCase();
+        int []f = new int[26];
         
-        String sb = new StringBuilder(A).reverse().toString();
-        
-        if( sb.equals(A)  )        // Understand the working .equals() method , Default Object.equals() checks whether two references refer to the same object.
-          System.out.print("Yes"); // But the String class overrides the .equals() method to compare the content , not the reference of the object.
-        else 
-          System.out.println("No");
-        
-        /* Enter your code here. Print output to STDOUT. */
-        
+        for(char e : x.toCharArray()){
+            
+            f[e-'a']++;
+        }
+        for(char e : y.toCharArray()){
+            f[e-'a']++;
+        }
+        for(int e : f){
+            if(e%2 != 0 )
+             return false;
+        }
+        return true;
     }
-}
-
-
 
