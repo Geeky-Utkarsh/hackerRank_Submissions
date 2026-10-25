@@ -45,7 +45,7 @@ Print the updated list $L$ as a single line of space-separated integers.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-25T12:28:18.591Z  
+**Submitted:** 2026-10-25T12:30:13.436Z  
 
 ```java
 import java.io.*;
