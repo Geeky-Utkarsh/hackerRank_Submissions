@@ -1,4 +1,4 @@
-# Java Inheritance I
+# Java Inheritance II
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -28,22 +28,20 @@ You are not responsible for printing anything to stdout. Your *add* method must 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-25T06:40:38.763Z  
+**Submitted:** 2026-10-25T06:45:30.250Z  
 
 ```java
 
 
-class Bird extends Animal{
-	void fly(){
-		System.out.println("I am flying");
-	}
-    // @Override 
-    // void walk(){
-    //     super.walk();
-    // }
-    void sing(){
-        System.out.println("I am singing");
+//Write your code here
+class Arithmetic {
+    public int add(int num1 , int num2){
+        return num1+num2;
     }
+}
+
+class Adder extends Arithmetic {
+       
 }
 
 
