@@ -1,4 +1,4 @@
-# Java Interface
+# Java Method Overriding
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -57,26 +57,16 @@ When executed, your completed code should print the following:
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-25T06:28:21.893Z  
+**Submitted:** 2026-10-25T06:33:11.750Z  
 
 ```java
 
 
-//Write your code here
-class MyCalculator implements AdvancedArithmetic{
-    
-     @Override     
-     public int divisor_sum(int n){
-        
-         int divisorSum = 0;
-         
-         for(int i = 1; i <= n; i++){
-                 if(n % i == 0)
-                   divisorSum += i;
-         }
-         return divisorSum;
-     }
-}
+    // Write your overridden getNumberOfTeamMembers method here
+    @Override
+    void getNumberOfTeamMembers(){
+        System.out.println("Each team has 11 players in " + getName());
+    }
 
 
 ```
