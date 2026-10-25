@@ -1,4 +1,4 @@
-# Java Method Overriding
+# Java Method Overriding 2 (Super Keyword)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -27,16 +27,12 @@ You are given a partially completed code in the editor. Modify the code so that 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-25T06:33:16.019Z  
+**Submitted:** 2026-10-25T06:36:11.653Z  
 
 ```java
 
-
-    // Write your overridden getNumberOfTeamMembers method here
-    @Override
-    void getNumberOfTeamMembers(){
-        System.out.println("Each team has 11 players in " + getName());
-    }
+        // using super.methodName() , to call a method which was defined in the SuperClass. 
+		String temp=super.define_me(); //Fix this line
 
 
 ```
