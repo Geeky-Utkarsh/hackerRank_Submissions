@@ -1,4 +1,10 @@
 
-        // using super.methodName() , to call a method which was defined in the SuperClass. 
-		String temp=super.define_me(); //Fix this line
+
+class MyBook extends Book{
+    void setTitle(String s){
+        title=s;
+    }
+}
+
+//Write MyBook class here
 
