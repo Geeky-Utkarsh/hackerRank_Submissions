@@ -1,4 +1,4 @@
-# Java Substring
+# Java BigDecimal
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -44,30 +44,14 @@ The second line contains an integer denoting $k$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-04T04:47:27.639Z  
+**Submitted:** 2026-11-09T14:28:33.873Z  
 
 ```java
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-public class Solution {
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String S = in.next();
-        
-        int start = in.nextInt();
-        int end = in.nextInt();
-        
-        String naya = S.substring(start, end);
-        
-        System.out.println(naya); 
-        
-    }
-}
+        //Write your code here
+        Arrays.sort(s, 0, n ,(a,b)-> new BigDecimal(b).compareTo( new BigDecimal(a) ));
+
 
 ```
 
