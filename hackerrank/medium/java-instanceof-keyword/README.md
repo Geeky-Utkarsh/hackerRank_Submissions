@@ -1,4 +1,4 @@
-# Java Method Overriding 2 (Super Keyword)
+# Java Abstract Class
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -47,12 +47,18 @@ To restore the original code in the editor, click on the top left icon in the ed
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-25T06:36:15.240Z  
+**Submitted:** 2026-11-09T14:42:53.535Z  
 
 ```java
 
-        // using super.methodName() , to call a method which was defined in the SuperClass. 
-		String temp=super.define_me(); //Fix this line
+
+class MyBook extends Book{
+    void setTitle(String s){
+        title=s;
+    }
+}
+
+//Write MyBook class here
 
 
 ```
